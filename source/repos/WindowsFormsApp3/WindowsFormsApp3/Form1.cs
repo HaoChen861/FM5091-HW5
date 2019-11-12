@@ -37,7 +37,7 @@ namespace WindowsFormsApp3
         
         private void rho_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -75,6 +75,8 @@ namespace WindowsFormsApp3
             }
             else
             {
+                try
+                {
                 if (float.Parse(Rho.Text)>1 || float.Parse(Rho.Text) < -1)
                             {
                                 MessageBox.Show("You have entered an invalid correlation.");
@@ -110,6 +112,12 @@ namespace WindowsFormsApp3
 
                     }
 
+                }
+
+                }
+                catch
+                {
+                    MessageBox.Show("You have entered an invalid correlation.");
                 }
 
             }
@@ -162,7 +170,15 @@ namespace WindowsFormsApp3
             return (rand3 , rand4);
 
         }
-
+        /// <summary>
+        /// Polar rejection function, use two uni-random to create two normal random
+        /// w= rand1^2+rand2^2
+        /// if w>1, redo
+        /// c=sqrt(-2*ln(w)/w)
+        /// normal_1=c*rand1
+        /// normal_2=c*rand2
+        /// </summary>
+        /// <returns>2 double random number</returns>
         public (double,double) Polar_Rejection_fun()
         {
             Random rnd = new Random();

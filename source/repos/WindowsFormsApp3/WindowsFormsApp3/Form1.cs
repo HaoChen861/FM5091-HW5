@@ -98,7 +98,8 @@ namespace WindowsFormsApp3
                     {
                         var values = joint_dist_fun();
 
-                        temp_var_word.Add(values.Item1) ;
+                        temp_var_word.Add(values.Item1);
+                        temp_var_word.Add(values.Item2);
                         Update_mean_var();
                         text = "First: " + values.Item1.ToString() + " Second: " + values.Item2.ToString();
                         result.Text = text + '\n' + result.Text;

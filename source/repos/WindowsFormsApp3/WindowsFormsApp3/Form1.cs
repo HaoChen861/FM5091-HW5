@@ -204,9 +204,9 @@ namespace WindowsFormsApp3
         public (double,double) Polar_Rejection_fun()
         {
             
-            double rand1 = 2*rnd.NextDouble()-1;
-            double rand2 = 2*rnd.NextDouble()-1;
-            double w = Math.Pow(rand1, 2) + Math.Pow(rand2, 2);
+            double rand1=0;
+            double rand2=0;
+            double w=0;
 
             while (w > 1 || w==0)
             {

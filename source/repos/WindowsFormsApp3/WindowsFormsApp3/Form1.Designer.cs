@@ -39,14 +39,18 @@
             this.Polar_Rejection = new System.Windows.Forms.RadioButton();
             this.Box_Muller = new System.Windows.Forms.RadioButton();
             this.Add_Twelve = new System.Windows.Forms.RadioButton();
+            this.Mean = new System.Windows.Forms.Label();
+            this.Mean_var = new System.Windows.Forms.Label();
+            this.Variance = new System.Windows.Forms.Label();
+            this.Variance_var = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(230, 151);
+            this.button1.Location = new System.Drawing.Point(230, 193);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 101);
+            this.button1.Size = new System.Drawing.Size(206, 59);
             this.button1.TabIndex = 3;
             this.button1.Text = "Normal Random Number";
             this.button1.UseVisualStyleBackColor = true;
@@ -163,11 +167,54 @@
             this.Add_Twelve.UseVisualStyleBackColor = true;
             this.Add_Twelve.CheckedChanged += new System.EventHandler(this.ATU_CheckedChanged);
             // 
+            // Mean
+            // 
+            this.Mean.AutoSize = true;
+            this.Mean.Location = new System.Drawing.Point(230, 170);
+            this.Mean.Name = "Mean";
+            this.Mean.Size = new System.Drawing.Size(40, 13);
+            this.Mean.TabIndex = 12;
+            this.Mean.Text = "Mean: ";
+            this.Mean.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // Mean_var
+            // 
+            this.Mean_var.AutoSize = true;
+            this.Mean_var.Location = new System.Drawing.Point(262, 170);
+            this.Mean_var.Name = "Mean_var";
+            this.Mean_var.Size = new System.Drawing.Size(13, 13);
+            this.Mean_var.TabIndex = 13;
+            this.Mean_var.Text = "0";
+            this.Mean_var.Click += new System.EventHandler(this.Mean_var_Click);
+            // 
+            // Variance
+            // 
+            this.Variance.AutoSize = true;
+            this.Variance.Location = new System.Drawing.Point(316, 169);
+            this.Variance.Name = "Variance";
+            this.Variance.Size = new System.Drawing.Size(52, 13);
+            this.Variance.TabIndex = 14;
+            this.Variance.Text = "Variance:";
+            // 
+            // Variance_var
+            // 
+            this.Variance_var.AutoSize = true;
+            this.Variance_var.Location = new System.Drawing.Point(363, 169);
+            this.Variance_var.Name = "Variance_var";
+            this.Variance_var.Size = new System.Drawing.Size(13, 13);
+            this.Variance_var.TabIndex = 15;
+            this.Variance_var.Text = "0";
+            this.Variance_var.Click += new System.EventHandler(this.Variance_var_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 305);
+            this.ClientSize = new System.Drawing.Size(452, 305);
+            this.Controls.Add(this.Variance_var);
+            this.Controls.Add(this.Variance);
+            this.Controls.Add(this.Mean_var);
+            this.Controls.Add(this.Mean);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -198,6 +245,10 @@
         private System.Windows.Forms.RadioButton Box_Muller;
         private System.Windows.Forms.RadioButton Add_Twelve;
         private System.Windows.Forms.CheckBox Joint_checkBox;
+        private System.Windows.Forms.Label Mean;
+        private System.Windows.Forms.Label Mean_var;
+        private System.Windows.Forms.Label Variance;
+        private System.Windows.Forms.Label Variance_var;
     }
 }
 
